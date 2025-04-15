@@ -1,0 +1,36 @@
+{
+  "welcome": "Welcome to our website!",
+  "description": "This is the landing page.",
+  "form": {
+    "number": "Number",
+    "id_card_number": "Identity Card No.",
+    "date_time_entry_of_work": "Date & Time of Entry to Work",
+    "office_date_time": "Office Date & Time",
+    "office_reentry_date_time": "Office Re-Entry Date & Time",
+    "return_date_time": "Return to Work Date & Time",
+    "presence_status": "Presence Status",
+    "non_compliance_type": "Types of Non-Compliance",
+    "reason_type": "Types of Reasons",
+    "reason": "Reasons",
+    "new_start_date_time": "New Start Date & Time",
+    "new_office_opening": "New Office Opening Date & Time",
+    "new_office_reentry": "New Office Re-Entry Date & Time",
+    "new_return_date_time": "New Return to Work Date & Time",
+    "notes": "Notes",
+    "supporting_documents": "Supporting Documents",
+    "submit": "Submit",
+    "add_record": "Add Record",
+    "print": "Print"
+  },
+  "table": {
+    "list_of_competency": "List of Competency Owner Attendance Records",
+    "number": "Number",
+    "id_card_number": "ID Card No.",
+    "date_time_entry_of_work": "Entry to Work",
+    "office_date_time": "Office Timing",
+    "office_reentry_date_time": "Office Re-Entry",
+    "return_date_time": "Return to Work",
+    "presence_status": "Presence Status",
+    "non_compliance_type": "Types of Non-Compliance"
+  }
+}
