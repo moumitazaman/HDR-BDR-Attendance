@@ -1,5 +1,9 @@
 <template>
   <div class="container">
-    <h1>Test 02</h1>
+    <AttendanceForm/>
   </div>
 </template>
+<script setup lang="ts">
+import AttendanceForm from './components/AttendanceForm.vue';
+</script>
+<style scoped></style>

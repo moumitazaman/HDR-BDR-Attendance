@@ -20,7 +20,18 @@
     "supporting_documents": "Supporting Documents",
     "submit": "Submit",
     "add_record": "Add Record",
-    "print": "Print"
+    "print": "Print",
+    "start_date_from_home": "Start Date From Home",
+    "end_employment_date_from_home": "End of Employment Date From Home",
+    "current_address_from_home": "Current Address From Home",
+    "agency_division": "Agency/Division",
+    "office_entry_time": "Date & Time of Entry to Work",
+    "office_end_time": "End Date & Time of Work",
+    "geo_coordinates": "Geo Coordinates",
+    "submitted": "Form submitted successfully",
+    "cancel": "Cancel",
+    "return":"Return",
+    "add_attendance":"Add Attendance Record"
   },
   "table": {
     "list_of_competency": "List of Competency Owner Attendance Records",
