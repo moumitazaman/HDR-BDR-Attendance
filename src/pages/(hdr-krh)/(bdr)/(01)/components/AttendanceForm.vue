@@ -23,25 +23,43 @@
       :showCloseButton="true"
       :dragEnabled="true"
       :closeOnOutsideClick="true"
+      :scrollingEnabled="true"
     >
       <template #default>
         <div class="p-6 bg-white rounded-lg space-y-4">
           <DxForm :formData="formData" :colCount="1" labelLocation="top" class="space-y-4">
             <DxItem :label="{ text: $t('form.number') }">
               <template #default>
-                <DxTextBox v-model="formData.number" class="w-full" />
+                <DxTextBox
+                  v-model="formData.number"
+                  :mask="'0000000000000000000000000000000'"
+                  class="w-full"
+                  placeholder="Enter Number"
+                />
               </template>
             </DxItem>
 
             <DxItem :label="{ text: $t('form.id_card_number') }">
               <template #default>
-                <DxTextBox v-model="formData.identityCardNo" class="w-full" />
+                <DxTextBox
+                  v-model="formData.identityCardNo"
+                  class="w-full"
+                  placeholder="Enter Identity Card Number"
+                  :focusStateEnabled="false"
+                />
               </template>
             </DxItem>
 
             <DxItem :label="{ text: $t('form.start_date_from_home') }">
               <template #default>
-                <DxDateBox v-model="formData.startDateFromHome" type="datetime" class="w-full" />
+                <DxDateBox
+                  v-model="formData.startDateFromHome"
+                  type="datetime"
+                  class="w-full"
+                  placeholder="DD/MM/YYYY  HH:MM"
+                  display-format="dd/MM/yyyy HH:mm"
+                  :focusStateEnabled="false"
+                />
               </template>
             </DxItem>
 
@@ -51,42 +69,74 @@
                   v-model="formData.endEmploymentDateFromHome"
                   type="datetime"
                   class="w-full"
+                  placeholder="DD/MM/YYYY  HH:MM"
+                  display-format="dd/MM/yyyy HH:mm"
+                  :focusStateEnabled="false"
                 />
               </template>
             </DxItem>
 
             <DxItem :label="{ text: $t('form.current_address_from_home') }">
               <template #default>
-                <DxTextBox v-model="formData.currentAddressFromHome" class="w-full" />
+                <DxTextArea
+                  class="w-full"
+                  :height="100"
+                  v-model="formData.currentAddressFromHome"
+                  placeholder="Current Address"
+                  :focusStateEnabled="false"
+                />
               </template>
             </DxItem>
 
             <DxItem :label="{ text: $t('form.agency_division') }">
               <template #default>
-                <DxTextBox v-model="formData.agencyDivision" class="w-full" />
+                <DxTextBox
+                  v-model="formData.agencyDivision"
+                  class="w-full"
+                  placeholder="Agency/Division"
+                  :focusStateEnabled="false"
+                />
               </template>
             </DxItem>
 
             <DxItem :label="{ text: $t('form.office_entry_time') }">
               <template #default>
-                <DxDateBox v-model="formData.entryToWork" type="datetime" class="w-full" />
+                <DxDateBox
+                  v-model="formData.entryToWork"
+                  type="datetime"
+                  class="w-full"
+                  placeholder="DD/MM/YYYY  HH:MM"
+                  display-format="dd/MM/yyyy HH:mm"
+                  :focusStateEnabled="false"
+                />
               </template>
             </DxItem>
 
             <DxItem :label="{ text: $t('form.office_end_time') }">
               <template #default>
-                <DxDateBox v-model="formData.endWork" type="datetime" class="w-full" />
+                <DxDateBox
+                  v-model="formData.endWork"
+                  type="datetime"
+                  class="w-full"
+                  placeholder="DD/MM/YYYY  HH:MM"
+                  display-format="dd/MM/yyyy HH:mm"
+                  :focusStateEnabled="false"
+                />
               </template>
             </DxItem>
 
             <DxItem :label="{ text: $t('form.geo_coordinates') }">
               <template #default>
-                <DxTextBox v-model="formData.geoCoordinates" class="w-full" />
+                <DxTextBox
+                  v-model="formData.geoCoordinates"
+                  class="w-full"
+                  placeholder="Geocordinates"
+                  :focusStateEnabled="false"
+                />
               </template>
             </DxItem>
           </DxForm>
 
-          <!-- Buttons -->
           <div class="flex justify-end gap-3 pt-4 border-t mt-6">
             <button
               @click="submitForm"
@@ -118,6 +168,7 @@ import { ref, reactive } from "vue";
 import DxForm, { DxItem } from "devextreme-vue/form";
 import DxDateBox from "devextreme-vue/date-box";
 import DxTextBox from "devextreme-vue/text-box";
+import DxTextArea from "devextreme-vue/text-area";
 import DxPopup from "devextreme-vue/popup";
 import { useRecordStore } from "@/stores/recordStore";
 
@@ -155,7 +206,7 @@ const submitForm = () => {
 
   setTimeout(() => {
     submissionMessage.value = "";
-  }, 5000);
+  }, 7000);
 };
 
 const cancelForm = () => {
