@@ -35,6 +35,7 @@
                   :mask="'0000000000000000000000000000000'"
                   class="w-full"
                   placeholder="Enter Number"
+                  :focusStateEnabled="false"
                 />
               </template>
             </DxItem>
