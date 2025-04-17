@@ -36,6 +36,7 @@
                   class="w-full"
                   placeholder="Enter Number"
                   :focusStateEnabled="false"
+                  :tabIndex="-1"
                 />
               </template>
             </DxItem>
@@ -47,6 +48,7 @@
                   class="w-full"
                   placeholder="Enter Identity Card Number"
                   :focusStateEnabled="false"
+                  :tabIndex="-1"
                 />
               </template>
             </DxItem>
@@ -60,6 +62,7 @@
                   placeholder="DD/MM/YYYY  HH:MM"
                   display-format="dd/MM/yyyy HH:mm"
                   :focusStateEnabled="false"
+                  :tabIndex="-1"
                 />
               </template>
             </DxItem>
@@ -85,6 +88,7 @@
                   v-model="formData.currentAddressFromHome"
                   placeholder="Current Address"
                   :focusStateEnabled="false"
+                  :tabIndex="-1"
                 />
               </template>
             </DxItem>
@@ -109,6 +113,9 @@
                   placeholder="DD/MM/YYYY  HH:MM"
                   display-format="dd/MM/yyyy HH:mm"
                   :focusStateEnabled="false"
+                  :tabIndex="-1"
+                  :min="todayStart"
+                  :max="todayEnd"
                 />
               </template>
             </DxItem>
@@ -122,6 +129,9 @@
                   placeholder="DD/MM/YYYY  HH:MM"
                   display-format="dd/MM/yyyy HH:mm"
                   :focusStateEnabled="false"
+                  :tabIndex="-1"
+                  :min="todayStart"
+                  :max="todayEnd"
                 />
               </template>
             </DxItem>
@@ -133,6 +143,7 @@
                   class="w-full"
                   placeholder="Geocordinates"
                   :focusStateEnabled="false"
+                  :tabIndex="-1"
                 />
               </template>
             </DxItem>
@@ -174,6 +185,9 @@ import DxPopup from "devextreme-vue/popup";
 import { useRecordStore } from "@/stores/recordStore";
 
 const showModal = ref(false);
+const today = new Date()
+const todayStart = ref(new Date(today.setHours(0, 0, 0, 0)))
+const todayEnd = ref(new Date(today.setHours(23, 59, 59, 999)))
 
 const emptyForm = () => ({
   number: "",
